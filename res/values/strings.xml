@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">我要禮物</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="action_settings">抽獎規則</string>
+	<string name="action_winlist">得獎名單</string>
+	<string name="action_mywinlist">我的抽獎紀錄</string>
+</resources>

@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpon="http://schemas.android.com/apk/lib/com.vpon.ads"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:background="#D6D4D5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/category"
+            android:background="#F0F0F0"
+            android:padding="14dp"
+            android:textStyle="bold"
+            android:text="任務"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+<ScrollView  
+android:layout_height="fill_parent"
+android:layout_width="fill_parent"
+android:layout_above="@+id/lineLayout5"
+android:layout_below="@+id/relativeLayout0"
+>
+        
+         <RelativeLayout
+        android:id="@+id/relativeLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         >    
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+         >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="請分別點選下面廣告" />
+
+        <TextView
+            android:id="@+id/textView21"
+			android:layout_marginBottom="10dp"
+            android:layout_below="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:textColor="#9C9C9C"
+            android:textSize="16sp"
+            android:text="點選後, 記得要讓廣告完全開啟後, 再按返回鍵, 才繼續點選下一個, 一直到通通完成" />
+        
+        <RelativeLayout
+            android:id="@+id/adLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView21"
+            android:background="#FFFFFF" >
+
+		<com.kuad.KuBanner
+			android:id="@+id/kuadview"
+			android:layout_centerHorizontal="true"
+			android:layout_width="match_parent"
+			android:layout_marginBottom="15dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			/>
+            
+			<com.google.ads.AdView android:id="@+id/adView"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="15dp"
+						 android:layout_below="@+id/kuadview"                         
+                         ads:adUnitId="a1520a5e8341bb7"
+                         ads:adSize="SMART_BANNER"
+                         ads:loadAdOnCreate="true"/>
+			
+			<com.vpon.ads.VponBanner
+			            android:id="@+id/vponBannerXML"
+			            android:layout_below="@+id/adView"
+			            android:layout_width="match_parent"
+			            android:layout_marginBottom="15dp"
+			            android:layout_height="wrap_content"
+			            android:layout_centerHorizontal="true"
+			            vpon:adSize="SMART_BANNER"
+			            vpon:autoFresh="true"
+			            vpon:bannerId="8a808182405cf45a014073c1607e08a0"
+			            vpon:loadAdOnCreate="true"
+			            vpon:platform="TW" />
+			
+						
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#D6D4D5"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="請輸入手機號碼" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_below="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#9C9C9C"
+            android:textSize="16sp"
+            android:text="中獎後會用簡訊通知您, 無法收到通知簡訊是無法領獎的喔" />
+        
+        <EditText
+            android:layout_below="@+id/textView22"
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="#575556"
+            android:ems="10"
+            android:inputType="phone">
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#D6D4D5"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout4" >
+
+        <TextView
+            android:id="@+id/textView131"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="請給我們一個好評吧" />
+                
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_below="@+id/textView131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#9C9C9C"
+            android:textSize="16sp"
+            android:text="利用給我們評價的同時, 也寫下您想要的禮物, 這樣抽獎的禮物就有機會出現您心中的禮物" />
+
+        <Button
+            android:id="@+id/button136"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignTop="@+id/textView131"
+            android:layout_toRightOf="@+id/textView131"
+            android:background="#5a5fc7"
+            android:gravity="bottom|center"
+            android:text="給評價去"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    
+    
+    
+    
+        </RelativeLayout>
+    </ScrollView>
+        
+    <LinearLayout
+        android:id="@+id/lineLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F2F2F2"
+            android:layout_marginRight="2dp"
+            android:text="確定" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:layout_weight="1"
+            android:text="取消" />
+    </LinearLayout>
+
+
+    
+</RelativeLayout>
