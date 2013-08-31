@@ -162,9 +162,9 @@ public class ShowTaskActivity extends Activity {
 				String phoneString = phone.getText().toString();
 				
 				if(!isClickAD1 || !isClickAD2) {
-					errorMsg = "½ĞÂI¿ï©Ò¦³¼s§i";
+					errorMsg = "è«‹é»é¸æ‰€æœ‰å»£å‘Š";
 				} else if(phoneString == null || phoneString.equals("")) {
-					errorMsg = "½Ğ¶ñ¼g¹q¸Ü";
+					errorMsg = "è«‹å¡«å¯«é›»è©±";
 				}
 
 				if(errorMsg != "") {
@@ -201,7 +201,6 @@ public class ShowTaskActivity extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 		if (vponBanner != null) {
-			// Â÷¶}®É "¤d¸U"°O±o­n©I¥svponBannerªº destroy
 			vponBanner.destroy();
 			vponBanner = null;
 		}
@@ -234,14 +233,14 @@ public class ShowTaskActivity extends Activity {
 				HttpResponseException hre = (HttpResponseException) arg0;
 				int statusCode = hre.getStatusCode();
 				
-				String errorMsg = "µo¥Í¿ù»~, ½Ğµy­Ô¦b¹Á¸Õ!";
+				String errorMsg = "ç™¼ç”ŸéŒ¯èª¤, è«‹ç¨å€™åœ¨å˜—è©¦!";
 				if(statusCode == 509) {
 					long t = Long.parseLong(arg1) / 60000;
 					if(t > 60) {
 						int h = (int) t / 60;
 						int m = (int) t % 60;
-						errorMsg = "»İ­n¦A¹j" + h + "¤p®É¤S" +  m  + "¤À, ¤~¯à°Ñ¥[©â¼ú¡I";
-					} else  errorMsg = "»İ­n¦A¹j" +  t  + "¤À, ¤~¯à°Ñ¥[©â¼ú¡I";
+						errorMsg = "éœ€è¦å†éš”" + h + "å°æ™‚åˆ" +  m  + "åˆ†, æ‰èƒ½åƒåŠ æŠ½çï¼";
+					} else  errorMsg = "éœ€è¦å†éš”" +  t  + "åˆ†, æ‰èƒ½åƒåŠ æŠ½çï¼";
 				}				
 				
 				AlertDialog.Builder builder = new AlertDialog.Builder(ShowTaskActivity.this);
@@ -273,7 +272,7 @@ public class ShowTaskActivity extends Activity {
     					ShowTaskActivity.this.startActivity(intent);
     	        	}
     	        });
-    	        builder.setMessage( "±z¦¹°Ó«~ªº©â¼ú§Ç¸¹¬°:" +  response  + ",·PÁÂ±zªº°Ñ»P¡I" );
+				builder.setMessage( "æ‚¨æ­¤å•†å“çš„æŠ½çåºè™Ÿç‚º:" +  response  + ",æ„Ÿè¬æ‚¨çš„åƒèˆ‡ï¼" );
     	        AlertDialog alert = builder.create();
     	        alert.show();				
 		    }

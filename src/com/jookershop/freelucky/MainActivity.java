@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 	private ListView listView;
 	public static String baseUrl = "http://www.jookershop.com:8080/";
 //	public static String baseUrl = "http://192.168.1.4:8080/";
-	private String [] categoryString;// = new String[] { "3C", "À\ÆU", "¦í±J"};	
+	private String [] categoryString;// = new String[] { "3C", "é¤å»³", "ä½å®¿"};		
 	private ContentAdapter adapter;
 	private int screenWidth;
 	private int screenHeight;
@@ -61,16 +61,16 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				new AlertDialog.Builder(MainActivity.this).setTitle("Ãş§O").setIcon( 
+				new AlertDialog.Builder(MainActivity.this).setTitle("é¡åˆ¥").setIcon( 
 						android.R.drawable.ic_dialog_info).setSingleChoiceItems(categoryString, selectdCategory, 
 								new DialogInterface.OnClickListener() {
 									public void onClick(DialogInterface dialog, int which) {
-										category.setText("Ãş§O:" + categoryString[which]);
+										category.setText("é¡åˆ¥:" + categoryString[which]);
 										selectdCategory = which;
 										refreshView(selectdCategory);
 										dialog.dismiss();
 										}
-									}).setNegativeButton("¨ú®ø", null).show();				
+									}).setNegativeButton("å–æ¶ˆ", null).show();				
 			}
 		});
 		refreshView(selectdCategory);
@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
 			    public void onSuccess(String response) {
 					AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 	    	        builder.setCancelable(false);
-					builder.setPositiveButton("½T»{", new DialogInterface.OnClickListener() {
+					builder.setPositiveButton("ç¢ºèª", new DialogInterface.OnClickListener() {
 						
 	    	        	public void onClick(DialogInterface dialog, int id) {
 	    	        	}
@@ -123,11 +123,11 @@ public class MainActivity extends Activity {
 			if(phone == "") {
 				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
     	        builder.setCancelable(false);
-				builder.setPositiveButton("½T»{", new DialogInterface.OnClickListener() {
+				builder.setPositiveButton("ç¢ºèª", new DialogInterface.OnClickListener() {
     	        	public void onClick(DialogInterface dialog, int id) {
     	        	}
     	        });
-    	        builder.setMessage("©|¥¼°Ñ»P¥ô¦ó©â¼ú¬¡°Ê");
+    	        builder.setMessage("å°šæœªåƒèˆ‡ä»»ä½•æŠ½çæ´»å‹•");
     	        AlertDialog alert = builder.create();
     	        alert.show();				
 			} else {

@@ -102,10 +102,10 @@ public class ContentAdapter extends BaseAdapter {
 //		found.setText(item.get(position).getFunded() + "%");
 		
 		TextView people = (TextView) v.findViewById(R.id.textView3);
-		people.setText(item.get(position).getParticipator() + "¤H");
+		people.setText(item.get(position).getParticipator() + "äºº");
 
 		TextView target = (TextView) v.findViewById(R.id.textView7);
-		target.setText(item.get(position).getTarget() + "¤H");
+		target.setText(item.get(position).getTarget() + "äºº");
 		
 		
 
@@ -155,7 +155,7 @@ public class ContentAdapter extends BaseAdapter {
 				@Override
 				public void onFailure(Throwable arg0, String arg1) {
 					super.onFailure(arg0, arg1);
-					String errorMsg = "µo¥Í¿ù»~, ½Ğµy­Ô¦b¹Á¸Õ!";
+					String errorMsg = "ç™¼ç”ŸéŒ¯èª¤, è«‹ç¨å€™åœ¨å˜—è©¦!";
 					
 //					if(arg0 instanceof  HttpHostConnectException) {
 //					} else 
@@ -168,8 +168,8 @@ public class ContentAdapter extends BaseAdapter {
 							if(t > 60) {
 								int h = (int) t / 60;
 								int m = (int) t % 60;
-								errorMsg = "»İ­n¦A¹j" + h + "¤p®É¤S" +  m  + "¤À, ¤~¯à°Ñ¥[©â¼ú¡I";
-							} else  errorMsg = "»İ­n¦A¹j" +  t  + "¤À, ¤~¯à°Ñ¥[©â¼ú¡I";
+								errorMsg = "éœ€è¦å†éš”" + h + "å°æ™‚åˆ" +  m  + "åˆ†, æ‰èƒ½åƒåŠ æŠ½çï¼";
+							} else  errorMsg = "éœ€è¦å†éš”" +  t  + "åˆ†, æ‰èƒ½åƒåŠ æŠ½çï¼";
 						}				
 					}
 					
